@@ -1,3 +1,9 @@
+/*
+Brandon Fisher
+Method implementation file
+*/
+
+
 #include "LinkedList.h"
 #include <vector>
 #include <algorithm>
@@ -39,7 +45,7 @@ template <typename T> void LinkedList<T>::addNode(T item) {
 	listCount += 1;
 }
 
-//Method to find a Node if it exists return true. Otherwisef return false
+//Method to find a Node if it exists return true. Otherwise return false
 template <typename T> bool LinkedList<T>::findNode(T item) const {
 	listNode<T>* currentNode = head;
 	while (currentNode) {
@@ -86,7 +92,7 @@ template <typename T> void LinkedList<T>::removeNode(T item) {
 		return;
 	}
 
-	//Special case to Remove the Head.
+	//Special case to remove the Head.
 	if (removeThis && isHead) {
 		head = removeThis->next;
 		if (head == nullptr) {

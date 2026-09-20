@@ -1,3 +1,8 @@
+/*
+Brandon Fisher
+Linked List Decalaration File
+*/
+
 #pragma once
 #include "ListNode.h"
 #include <ostream>
