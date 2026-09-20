@@ -14,6 +14,7 @@ int main() {
 	LinkedList<int> list;
 	std::cout << "Add 1 to the list: " << std::endl;
 	list.addNode(1);
+	//Create a list to track odd numbers...you'll see why...
 	std::vector<int> oddNums;
 	int count = list.getSize();
 
@@ -25,6 +26,7 @@ int main() {
 		list.addNode(i);
 		count = list.getSize();
 		if ((i % 2) == 1) {
+			//append to that odd list we were talking about earlier
 			oddNums.push_back(i);
 		}
 	}
@@ -34,6 +36,7 @@ int main() {
 
 	std::cout << "Now delete all the odd Numbers (not including 1...): " << std::endl;
 	for (int i = 0; i < oddNums.size(); ++i) {
+		//Here's where that list is useful
 		list.removeNode(oddNums[i]);
 		count = list.getSize();
 	}
@@ -52,6 +55,7 @@ int main() {
 
 	std::cout << "Now try to remove odd numbers again..." << std::endl;
 	for (int i = 0; i < oddNums.size(); ++i) {
+		//That list again...
 		list.removeNode(oddNums[i]);
 		
 	}
