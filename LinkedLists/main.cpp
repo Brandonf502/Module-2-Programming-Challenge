@@ -31,6 +31,11 @@ int main() {
 		}
 	}
 
+	for (int i = 0; i < 10; ++i) {
+		bool foundNode = list.findNode(oddNums[i]);
+		std::cout << "Found " << oddNums[i] << ": " << std::boolalpha << foundNode << std::endl;
+	}
+
 	std::cout << list << '\n' << std::endl;
 	std::cout << "Count: " << count << '\n' << std::endl;
 
@@ -39,6 +44,11 @@ int main() {
 		//Here's where that list is useful
 		list.removeNode(oddNums[i]);
 		count = list.getSize();
+	}
+
+	for (int i = 0; i < 10; ++i) {
+		bool foundNode = list.findNode(oddNums[i]);
+		std::cout << "Found " << oddNums[i] << ": " << std::boolalpha << foundNode << std::endl;
 	}
 
 	std::cout << list << '\n' << std::endl;
