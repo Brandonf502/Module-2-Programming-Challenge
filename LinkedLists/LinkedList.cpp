@@ -21,14 +21,14 @@ template <typename T> LinkedList<T>::~LinkedList() {
 	while (!finished) {
 		nextNode = currentNode->next;
 		listCount -= 1;
-		std::cout << "Deleting all nodes... " << '\n' << std::endl;
-		std::cout << "Count: " << listCount << '\n' << std::endl;
 		delete currentNode;
 		currentNode = nextNode;
 		if (nextNode == nullptr) {
 			finished = true;
 		}
 	}
+	std::cout << "Deleting all nodes... " << '\n' << std::endl;
+	std::cout << "Count: " << listCount << '\n' << std::endl;
 }
 
 //Add Nodes, if no head or tail exist this node becomes head and tail(handle list size = 0)
