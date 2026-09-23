@@ -79,7 +79,10 @@ int main() {
 	std::cout << list << '\n' << std::endl;
 	std::cout << "Count: " << count << '\n' << std::endl;
 
+
+
 	
 	std::cout << "El Fin :)" << std::endl;
-
+ 
+	return 0;
 }

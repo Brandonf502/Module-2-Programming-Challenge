@@ -7,6 +7,7 @@ Method implementation file
 #include "LinkedList.h"
 #include <vector>
 #include <algorithm>
+#include <iostream>
 
 //This page includes definitions of all methods available for LinkedList()
 template <typename T> LinkedList<T>::LinkedList() {}
@@ -19,6 +20,9 @@ template <typename T> LinkedList<T>::~LinkedList() {
 
 	while (!finished) {
 		nextNode = currentNode->next;
+		listCount -= 1;
+		std::cout << "Deleting all nodes... " << '\n' << std::endl;
+		std::cout << "Count: " << listCount << '\n' << std::endl;
 		delete currentNode;
 		currentNode = nextNode;
 		if (nextNode == nullptr) {
