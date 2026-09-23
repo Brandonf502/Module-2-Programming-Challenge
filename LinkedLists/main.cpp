@@ -31,13 +31,17 @@ int main() {
 		}
 	}
 
-	for (int i = 0; i < 10; ++i) {
-		bool foundNode = list.findNode(oddNums[i]);
-		std::cout << "Found " << oddNums[i] << ": " << std::boolalpha << foundNode << std::endl;
-	}
+	
 
 	std::cout << list << '\n' << std::endl;
 	std::cout << "Count: " << count << '\n' << std::endl;
+
+	std::cout << "Look for odd Numbers. " << std::endl;
+
+	for (int i = 0; i < 10; ++i) {
+		bool foundNode = list.findNode(oddNums[i]);
+		std::cout << "Found " << oddNums[i] << ": " << std::boolalpha << foundNode << '\n' << std::endl;
+	}
 
 	std::cout << "Now delete all the odd Numbers (not including 1...): " << std::endl;
 	for (int i = 0; i < oddNums.size(); ++i) {
@@ -46,13 +50,15 @@ int main() {
 		count = list.getSize();
 	}
 
-	for (int i = 0; i < 10; ++i) {
-		bool foundNode = list.findNode(oddNums[i]);
-		std::cout << "Found " << oddNums[i] << ": " << std::boolalpha << foundNode << std::endl;
-	}
 
 	std::cout << list << '\n' << std::endl;
 	std::cout << "Count: " << count << '\n' << std::endl;
+
+	std::cout << "Are there any odd numbers now?" << std::endl;
+	for (int i = 0; i < 10; ++i) {
+		bool foundNode = list.findNode(oddNums[i]);
+		std::cout << "Found " << oddNums[i] << ": " << std::boolalpha << foundNode << '\n' << std::endl;
+	}
 	
 	std::cout << "Remove First and Last numbers: " << std::endl;
 	list.removeNode(1);
